@@ -4,16 +4,28 @@
     <link rel="stylesheet" href="/output.css" />
   </head>
   <body class="flex w-full h-screen bg-custom-background">
-    <div class="flex flex-col justify-center items-center w-full gap-12">
-      <div>
-        <textarea class="flex w-150 resize-none h-48 bg-white
-         rounded-3xl p-4 outline-none" maxlength="200"
-         placeholder="Write your message here (max 200 characters)"></textarea>
-      </div>
-      <div class="flex  w-full justify-center items-center border-red-300">
-        <button class=" bg-black text-white h-24 p-4 rounded-2xl
-         hover:bg-gray-800">Add a new message</button>
-      </div>
+    <div class="flex justify-center items-center w-full">
+      <form action="/new" method="POST">
+        <div class="flex w-full flex-col gap-12">
+          <div class="flex w-32">
+            <input type="text" name="name" class="bg-white rounded-2xl outline-none p-4
+            " placeholder="Nickname" maxlength="25" required>
+          </div>
+          <div>
+            <textarea class="flex w-150 resize-none h-48 bg-white
+             rounded-3xl p-4 outline-none" maxlength="200"
+             placeholder="Write your message here (max 200 characters)"
+             name="message" required></textarea>
+          </div>
+          <div class="flex w-full justify-center items-center border-red-300">
+            <div class="flex bg-black text-white rounded-2xl
+            hover:bg-gray-800 p-4">
+              <button
+               type="submit">Add a new message</button>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
     </body>
 
